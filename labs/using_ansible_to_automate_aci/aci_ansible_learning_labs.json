@@ -1,0 +1,24 @@
+{
+  "labId": "aci_ansible_learning_labs",
+  "title": "Automating Cisco ACI with Ansible",
+  "slug": "Learn how to automate Cisco ACI with ansible",
+  "time": 35,
+  "byod": true,
+  "files": [
+    {"title": "1.md"},
+    {"title": "2.md"},
+    {"title": "3.md"},
+    {"title": "4.md"},
+    {"title": "5.md"},
+    {"title": "6.md"},
+    {"title": "7.md"},
+    {"title": "8.md"}
+  ],
+  "tags": [
+    {"title": "ACI"},
+    {"title": "Ansible"}
+  ],
+  "authors": [
+    {"name": "Armen Martirosyan", "email": "armartir@cisco.com"}
+  ]
+}
