@@ -1,0 +1,108 @@
+<p>To work on this lab from your own machine, you'll need to meet the following requirements.</p>
+<h3>Client Pre-Reqs</h3>
+<ul>
+    <li>Python 2.7 or Python 3.6+</li>
+    <ul>
+        <li>virtual environment (suggested but not required)</li>
+        <li>pip</li>
+    </ul>
+    <li>"git" command line tools</li>
+</ul>
+
+<h3>Workstation Setup Instructions</h3>
+<p>This lab can be completed from a Mac, or Linux workstation as long as the above pre-reqs are installed. (Windows is <strong>NOT</strong> supported by Ansible)  </p>
+<p>Python 2.7 is included with Linux and OS X by default, however it is typically an older version.  To assist with ensureing you have the latest version of Python, here are some suggested steps to prepare common platforms.</p>
+<p>If your environment requires a proxy server to access internet resources, be sure that it is configured correctly on your system, and adjust any steps/commands listed below as needed.</p>
+<h3>Install Python</h3>
+<ul>
+    <li>CentOS Sample Setup Instructions Example</li>
+    <ul>
+        <li>Standard Development Tools
+            <pre>sudo yum -y groupinstall development  </pre>
+        </li>
+        <li>Python 2.7
+            <pre>sudo yum -y install gcc
+sudo yum -y install wget
+wget https://www.python.org/ftp/python/2.7.13/Python-2.7.13.tgz
+tar xzf Python-2.7.13.tgz
+cd Python-2.7.13
+./configure  --prefix=/usr/local --enable-unicode=ucs4 --enable-shared LDFLAGS="-Wl,-rpath /usr/local/lib"
+make altinstall
+sudo yum -y install python-pip
+sudo pip install virtualenv</pre>
+        </li>
+        <li>OpenSSL Development Library
+            <pre>sudo yum -y install openssl-devel\</pre>
+        </li>
+    </ul>
+    <li>Ubuntu Sample Setup Instructions Example</li>
+    <ul>
+        <li>Standard Development Tools
+            <pre>sudo apt-get install build-essential</pre>
+        </li>
+        <li>Python 2.7
+            <pre>wget https://www.python.org/ftp/python/2.7.13/Python-2.7.13.tgz
+tar xzf Python-2.7.13.tgz
+cd Python-2.7.13
+./configure  --prefix=/usr/local --enable-unicode=ucs4
+make altinstall
+sudo apt-get install python-pip -y
+sudo pip install virtualenv   </pre>
+        </li>
+        <li>OpenSSL Development Library
+            <pre>sudo apt -y install libssl-dev</pre>
+        </li>
+    </ul>
+    <li>Mac OS X Installation</li>
+    <ul>
+        <li>git installation - <a href="https://git-scm.com/download/mac" target="_blank" rel="noopener">https://git-scm.com/download/mac</a></li>
+        <li>Python 2.7 installation - <a href="https://www.python.org/downloads/release/python-2713/" target="_blank" rel="noopener">https://www.python.org/downloads/release/python-2713/</a></li>
+        <li>Python pip installation
+            <pre>curl -o get-pip.py https://bootstrap.pypa.io/get-pip.py
+sudo python get-pip.py        </pre>
+        </li>
+        <li>Python 2.7 Customization
+            <pre>sudo pip install virtualenv       </pre>
+        </li>
+        <li>Command Line Developer Tools Installation
+            <pre>xcode-select --install</pre> After running command, complete installation using the GUI.</li>
+    </ul>
+</ul>
+
+
+<h3>Pull Down Sample Code and Prep Python Environment with Ansible</h3>
+
+<blockquote>
+  <p>Either Python 2.7 or 3.6+ should work for this lab.  In the examples we will be using Python 2.7.</p>
+</blockquote>
+
+<p>With the software pre-reqs installed on your workstation, next you will get the sample code from GitHub, setup the Python environment, and install any Python requirements with pip.</p>
+<ul>
+    <li>MAC or Linux</li>
+</ul>
+<pre style="padding-left: 30px;">#From your working directory
+git clone https://github.com/CiscoDevNet/aci_ansible_learning_labs_code_samples
+cd aci_ansible_learning_labs_code_samples/intro_module
+virtualenv venv --python=python2.7
+source venv/bin/activate
+pip install -r requirements.txt
+</pre>
+
+<p>For additional Ansible installation help, please see Ansible documentation at http://docs.ansible.com/ansible/latest/intro_installation.html.</p>
+
+<h3 id="usingthislab">ACI Sandbox Access</h2>
+<p>
+  This lab uses the Always-On ACI Simulator available through the DevNet Sandbox environment; details for connecting to the APIC can be found at https://devnetsandbox.cisco.com/RM/Topology.  For reference, here are the key details:
+</p>
+
+<ul>
+  <li>
+    APIC URL: <a href="https://sandboxapicdc.cisco.com" target="_blank">https://sandboxapicdc.cisco.com</a>
+  </li>
+  <li>
+    Username: <strong>admin</strong>
+  </li>
+  <li>
+    Password: <strong>ciscopsdt</strong>
+  </li>
+</ul>
