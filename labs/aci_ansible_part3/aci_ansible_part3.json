@@ -1,0 +1,35 @@
+{
+  "labId": "aci_ansible_part3",
+  "title": "Bringing it together for ACI as Code with Ansible",
+  "slug": "Build playbooks to fully manage ACI configurations with Ansible.",
+  "time": 20,
+  "byod": true,
+  "files": [
+    {"title": "1.md"},
+    {"title": "2.md"},
+    {"title": "3.md"},
+    {"title": "4.md"},
+    {"title": "5.md"}
+  ],
+  "tags": [
+    {"title": "ACI"},
+    {"title": "Ansible"},
+    {"title": "Data Center"},
+    {"title": "SDN"},
+    {"title": "APIC"}
+  ],
+  "related": [
+    {
+      "labId": "aci_ansible_part1",
+      "title": "Start Automating Cisco ACI with Ansible"
+    },
+    {
+      "labId": "aci_ansible_part2",
+      "title": "Application and Network Policy with Ansible"
+    }
+  ],
+  "authors": [
+    {"name": "Armen Martirosyan", "email": "armartir@cisco.com"},
+    {"name": "Hank Preston", "email": "hapresto@cisco.com"}
+  ]
+}
